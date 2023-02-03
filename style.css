@@ -75,5 +75,49 @@
    transform: rotate(45deg);
    top: 50px;
    left: -13px;
+}
+
+form {
+   padding: 2.3rem 2.2rem;
+   z-index: 10;
+   overflow: hidden;
+   position: relative;
+}
+
+.title{
+   color: silver;
+   font-weight: 500;
+   font-size: 1rem;
+   line-height: 1;
+   margin-bottom: 0.7rem;
+   text-align: center;
+}
+
+.input-container {
+   position: relative;
+   margin: 1rem 0;
+}
+
+
+.input {
+   width: 100%;
+   outline: none;
+   border: 2px solid silver;
+   background: none;
+   padding: 0.3rem 0.9rem;
+   color: red;
+   font-weight: 500;
+   font-size: 0.8rem;
+   letter-spacing: 0.5px;
+   border-radius: 9px;
+   transition: 0.3s;
+}
+
+textarea.input{
+   padding: 0.3rem 0.9rem;
+   min-height: 150px;
+   border-radius: 22px;
+   resize: none;
+   overflow-y: auto;
 
 }
