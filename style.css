@@ -42,7 +42,7 @@
 
 
  .feedback-form {
-    background-color: #727676;
+    background-color: black;
     position: relative;
  }
 
@@ -70,7 +70,7 @@
    position: absolute;
    width: 26px;
    height: 26px;
-   background-color: #727676;
+   background-color: black;
    transform: rotate(45deg);
    top: 50px;
    left: -13px;
@@ -84,7 +84,7 @@ form {
 }
 
 .title{
-   color: silver;
+   color: #fafafa;
    font-weight: 500;
    font-size: 1rem;
    line-height: 1;
@@ -104,7 +104,7 @@ form {
    border: 2px solid silver;
    background: none;
    padding: 0.3rem 0.9rem;
-   color: red;
+   color: white;
    font-weight: 500;
    font-size: 0.8rem;
    letter-spacing: 0.5px;
@@ -177,7 +177,7 @@ textarea.input{
    opacity: 0;
    transition: 0.3s;
    height: 5px;
-   background-color: #727676;
+   background-color: black;
    top: 50%;
    transform: translateY(-50%);
 }
@@ -188,3 +188,50 @@ textarea.input{
 .input-container span:after {
    right: 50%;
 } 
+
+.input-container.focus label {
+   top: 0;
+   transform: translateY(-50%);
+   left: 25px;
+   font-size: 0.8rem;
+}
+
+.input-container.focus span:before,
+.input-container.focus span:after {
+   width: 50%;
+   opacity: 1;
+}
+
+.icon {
+   width: 28px;
+}
+
+.contact-info {
+   padding: 2.3rem 2.2rem;
+   position: relative;
+}
+
+.contact-info .title {
+   color: black;
+   font-size: bold;
+   text-align: left;
+}
+
+.text {
+   color: #333;
+   margin: 0.1rem 0 2rem 0;
+   font-size: 0.9rem;
+}
+
+.information {
+   display: flex;
+   color: #555;
+   margin: 0.7rem 0;
+   align-items: center;
+   font-size: 0.90rem;
+}
+
+.icon {
+   width: 28px;
+   margin-right: 0.7rem;
+}
