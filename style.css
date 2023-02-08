@@ -229,9 +229,22 @@ textarea.input{
    margin: 0.7rem 0;
    align-items: center;
    font-size: 0.90rem;
+   font-weight: 450;
+}
+
+.information a {
+   color: #333;
+   text-decoration: none;
+   font-weight: 450;
 }
 
 .icon {
    width: 28px;
    margin-right: 0.7rem;
 }
+
+.avaliacao{
+   display: flex;
+  }
+ 
+ 
