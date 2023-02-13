@@ -17,10 +17,10 @@ inputs.forEach((input) => {
     input.addEventListener("blur", blurFunc)
 })
 
-var stars = document.querySelectorAll('.star-icon');
+const stars = document.querySelectorAll('.star-icon');
                   
 document.addEventListener('click', function(e){
-  var classStar = e.target.classList;
+  const classStar = e.target.classList;
   if(!classStar.contains('ativo')){
     stars.forEach(function(star){
       star.classList.remove('ativo');
