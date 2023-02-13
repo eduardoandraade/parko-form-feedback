@@ -19,7 +19,7 @@ inputs.forEach((input) => {
 
 const stars = document.querySelectorAll('.star-icon');
                   
-document.addEventListener('click', function(e){
+document.getElementById('avaliacao').addEventListener('click', function(e){
   const classStar = e.target.classList;
   if(!classStar.contains('ativo')){
     stars.forEach(function(star){
