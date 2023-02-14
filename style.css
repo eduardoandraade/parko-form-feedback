@@ -210,7 +210,7 @@ textarea.input{
    border: 1px solid black;
    cursor: pointer;
    color: #ffe500;
-   font-size: 2rem;
+   font-size: 2.5rem;
    padding: 0 8px 0;
 }
 
@@ -285,5 +285,24 @@ textarea.input{
 .avaliacao{
    display: flex;
   }
+
+.social-media {
+   padding: 2rem 0 0 0;
+}
+
+.social-media p {
+   color: #333;
+}
+
+.social-icons {
+   display: flex;
+   margin-top: 0.5rem;
+}
  
- 
+.social-icons a{
+   width: 35px;
+   height: 35px;
+   border-radius: 5px;
+   background: linear-gradient(45deg, #0000, #0000);
+   color: #000;
+}
