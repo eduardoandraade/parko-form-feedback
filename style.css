@@ -33,7 +33,7 @@
     z-index: 1000;
     overflow: hidden;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;;
  }
 
 .contact-info {
@@ -290,19 +290,14 @@ textarea.input{
    padding: 2rem 0 0 0;
 }
 
-.social-media p {
+.social-media p, a {
    color: #333;
 }
 
-.social-icons {
-   display: flex;
-   margin-top: 0.5rem;
+@media (max-width: 850px){
+   .form {
+      grid-template-columns: 1fr;
+   }
+
 }
- 
-.social-icons a, img{
-   width: 35px;
-   height: 35px;
-   border-radius: 5px;
-   background: linear-gradient(45deg, #0000, #0000);
-   color: #000;
-}
+
