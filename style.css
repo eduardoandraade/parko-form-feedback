@@ -88,7 +88,7 @@ form {
    font-size: 1rem;
    line-height: 1;
    margin-bottom: 0.7rem;
-   text-align: center;
+   text-align: left;
    color: silver;
    font-weight: 450;
    cursor: default;
@@ -344,4 +344,5 @@ textarea.input{
    .btn {
       padding: 0.45rem 1.2rem;
    }
+
 }
