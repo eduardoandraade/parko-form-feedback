@@ -84,12 +84,15 @@ form {
 }
 
 .title{
-   color: #fafafa;
    font-weight: 500;
    font-size: 1rem;
    line-height: 1;
    margin-bottom: 0.7rem;
    text-align: center;
+   color: silver;
+   font-weight: 450;
+   cursor: default;
+   text-decoration: none;
 }
 
 .input-container {
@@ -299,5 +302,46 @@ textarea.input{
       grid-template-columns: 1fr;
    }
 
+   .text {
+      margin: 1rem 0 1.5rem 0;
+   }
 }
 
+
+@media (max-width: 480px){
+   .container {
+      padding: 1.5rem;
+   }
+
+   .contact-info:before {
+      display: none;
+   }
+
+   .form,
+   .contact-info{
+      padding: 1.7rem 1.6rem;
+   }
+
+   .text, 
+   .information, 
+   p {
+      font-size: 0.8rem;
+   }
+
+   .title {
+      font-size: 1.15rem;
+   }
+
+   .icon {
+      width: 23px;
+
+   }
+
+   .input {
+      padding: 0.45rem 1.2rem;
+   }
+
+   .btn {
+      padding: 0.45rem 1.2rem;
+   }
+}
