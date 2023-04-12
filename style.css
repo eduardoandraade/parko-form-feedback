@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700;800&display=swap');
- 
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+
 * {
     margin: 0;
     padding: 0;
@@ -46,26 +47,6 @@
     position: relative;
  }
 
-/** .circle {
-   border-radius: 50%;
-   background: linear-gradient(135deg, transparent 20%, #D9F8FF);
-   position: absolute;
-}
-
-.circle.one {
-   width: 130px;
-   height: 130px;
-   top: 130px;
-   right: -40px;
-}
-.circle.two {
-   width: 80px;
-   height: 80px;
-   top: 1px;
-   right: 30px;
-} **/
-
-
 form {
    padding: 2.3rem 2.2rem;
    z-index: 10;
@@ -90,6 +71,15 @@ form {
    margin: 1rem 0;
 }
 
+.input-container-rating {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   font-weight: 500;
+   
+}
+
 
 .input {
    width: 100%;
@@ -104,6 +94,7 @@ form {
    border-radius: 9px;
    transition: 0.3s;
 }
+
 
 textarea.input{
    padding: 0.8rem 1.2rem;
@@ -182,10 +173,7 @@ textarea.input{
    right: 50%;
 } 
 
-.avaliacao {
-   display: flex;
-   justify-content: center;
-}
+
 
 .input-container div {
    text-align: center;
@@ -196,6 +184,11 @@ textarea.input{
    pointer-events: none;
    z-index: 1000;
    transition: 0.5s;
+}
+
+.avaliacao {
+   display: flex;
+   justify-content: center;
 }
 
 .star-icon {
