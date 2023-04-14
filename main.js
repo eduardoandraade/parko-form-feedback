@@ -17,7 +17,9 @@ inputs.forEach((input) => {
     input.addEventListener("blur", blurFunc)
 })
 
-const stars = document.querySelector('.star-icon');
+let stars = document.getElementById('.rating');
+
+
                   
 function removeMouseListener() {
   stars.forEach(function(star){
@@ -27,15 +29,17 @@ function removeMouseListener() {
   });
 }
 
-document.getElementById('avaliacao').addEventListener('click', function(e){
+stars.addEventListener('click', function(e){
   const classStar = e.target.classList;
   if(!classStar.contains('ativo')){
     stars.forEach(function(star){
       star.classList.remove('ativo');
     });
     classStar.add('ativo');
-    console.log(e.target.getAttribute('data-avaliacao'));
+    
     
     removeMouseListener();
+
+    console.log(e.target.getAttribute('data-avaliacao'));
   }
 });
