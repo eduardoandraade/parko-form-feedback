@@ -71,4 +71,10 @@ if(localStorage.getItem("rating")){
 }
 
 
+let btn = document.querySelector(".btn");
+
+btn.addEventListener("click", function(){
+    window.location.href = "./pages/sucesso.html";
+});
+
 
