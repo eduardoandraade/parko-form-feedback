@@ -23,7 +23,7 @@ document.querySelector('.teste').addEventListener('submit', function(e) {
     let formData = new FormData(this);
   
     // Itera sobre os dados de formulário
-    formData.forEach(function(value, key) {
+formData.forEach(function(value, key) {
       localStorage.setItem(key, value);
     });
   });
@@ -37,12 +37,12 @@ for(let star of stars){
         let children = star.parentElement.children;
         for(let child of children){
             if(child.getAttribute("data-clicked")){
-                return false;
+                child.removeAttribute("data-clicked");
+                this.setAttribute("data-clicked", "true");
+            } else {
+                this.setAttribute("data-clicked", "true");
             }
         }
-
-
-        this.setAttribute("data-clicked", "true")
 
         let rating = this.dataset.rating;
         let productId = this.parentElement.dataset.productid;
