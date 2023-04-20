@@ -35,14 +35,14 @@ let ratings = [];
 for(let star of stars){
     star.addEventListener("click", function(){
         let children = star.parentElement.children;
-        for(let child of children){
-            if(child.getAttribute("data-clicked")){
-                return false;
+        for (let child of children) {
+            if (child.getAttribute("data-clicked")) {
+                child.removeAttribute("data-clicked");
+                this.setAttribute("data-clicked", "true");
+            } else {
+                this.setAttribute("data-clicked", "true");
             }
         }
-
-
-        this.setAttribute("data-clicked", "true")
 
         let rating = this.dataset.rating;
         let productId = this.parentElement.dataset.productid;
