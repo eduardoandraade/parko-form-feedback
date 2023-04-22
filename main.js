@@ -43,6 +43,7 @@ for(let star of stars){
                 this.setAttribute("data-clicked", "true");
             }
         }
+            setRating(this.getAttribute("data-rating"));
 
         let rating = this.dataset.rating;
         let productId = this.parentElement.dataset.productid;
@@ -70,5 +71,8 @@ if(localStorage.getItem("rating")){
     }
 }
 
-
-
+function setRating(value){
+    const ratingSelected = document.getElementById('ratingSelected');
+    ratingSelected.value = value;
+    // console.log(ratingSelected.value);
+}
