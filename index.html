@@ -17,20 +17,17 @@
         <div class="form">
             <div class="feedback-form">
 
-                <form class="teste" method="POST">
-                    
-                    
-                    
+                <form class="teste" >
                     
                     <h3 class="title">Avalie nosso atendimento</h3>
                     <div class="input-container">
                         <input type="text" name="name" class="input">
-                        <label for="">Nome</label>
+                        <label for="text">Nome</label>
                         <span>Nome</span>
                     </div>
                     <div class="input-container">
                         <input type="email" name="email" class="input">
-                        <label for="">Email</label>
+                        <label for="email">Email</label>
                         <span>Email</span>
                     </div>
 
@@ -43,6 +40,7 @@
                         <div class="ratings-wrapper">
 
                             <div data-productid="39" class="ratings">
+                                <input type="hidden" name="data-rating" id="ratingSelected">
 
                                 <span data-rating="5">&#9733</span>
                     
@@ -66,7 +64,7 @@
 
                     <div class="input-container textarea">
                         <textarea name="message" class="input"></textarea>
-                        <label for="">Deixe o seu feedback pra gente</label>
+                        <label for="message">Deixe o seu feedback pra gente</label>
                         <span>Deixe o seu feedback pra gente</span>
                     </div>
                     <button type="submit" class="btn">Enviar</button>

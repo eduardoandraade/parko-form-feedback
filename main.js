@@ -23,7 +23,7 @@ document.querySelector('.teste').addEventListener('submit', function(e) {
     let formData = new FormData(this);
   
     // Itera sobre os dados de formulário
-formData.forEach(function(value, key) {
+    formData.forEach(function(value, key) {
       localStorage.setItem(key, value);
     });
   });
@@ -35,8 +35,8 @@ let ratings = [];
 for(let star of stars){
     star.addEventListener("click", function(){
         let children = star.parentElement.children;
-        for(let child of children){
-            if(child.getAttribute("data-clicked")){
+        for (let child of children) {
+            if (child.getAttribute("data-clicked")) {
                 child.removeAttribute("data-clicked");
                 this.setAttribute("data-clicked", "true");
             } else {
@@ -69,12 +69,3 @@ if(localStorage.getItem("rating")){
         }
     }
 }
-
-
-let btn = document.querySelector(".btn");
-
-btn.addEventListener("click", function(){
-    window.location.href = "./pages/sucesso.html";
-});
-
-
