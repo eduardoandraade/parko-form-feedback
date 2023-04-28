@@ -17,16 +17,16 @@ inputs.forEach((input) => {
     input.addEventListener("blur", blurFunc)
 })
 
-document.querySelector('.teste').addEventListener('submit', function(e) {
-    e.preventDefault();
+// document.querySelector('.teste').addEventListener('submit', function(e) {
+//     e.preventDefault();
   
-    let formData = new FormData(this);
+//     let formData = new FormData(this);
   
-    // Itera sobre os dados de formulário
-    formData.forEach(function(value, key) {
-      localStorage.setItem(key, value);
-    });
-  });
+//     // Itera sobre os dados de formulário
+//     formData.forEach(function(value, key) {
+//       localStorage.setItem(key, value);
+//     });
+//   });
 
 let stars = document.querySelectorAll(".ratings span");
 let products = document.querySelectorAll(".ratings");
@@ -45,31 +45,31 @@ for(let star of stars){
         }
             setRating(this.getAttribute("data-rating"));
 
-        let rating = this.dataset.rating;
-        let productId = this.parentElement.dataset.productid;
+        // let rating = this.dataset.rating;
+        // let productId = this.parentElement.dataset.productid;
         
-        let data = {
-            "stars": rating,
-            "product-id": productId
-        }
+        // let data = {
+        //     "stars": rating,
+        //     "product-id": productId
+        // }
 
-        ratings.push(data);
-        localStorage.setItem("rating", JSON.stringify(ratings))
+        // ratings.push(data);
+        // localStorage.setItem("rating", JSON.stringify(ratings))
     })
 }
 
-if(localStorage.getItem("rating")){
+// if(localStorage.getItem("rating")){
 
-    ratings = JSON.parse(localStorage.getItem("rating"))
-    for(let product of products){
-        if(ratings["product-id"] == product.dataset.productid){
-            let reversedStars = Array.from(product.children).reverse()
-            let index = parseInt(rating["stars"]) -1;
+//     ratings = JSON.parse(localStorage.getItem("rating"))
+//     for(let product of products){
+//         if(ratings["product-id"] == product.dataset.productid){
+//             let reversedStars = Array.from(product.children).reverse()
+//             let index = parseInt(rating["stars"]) -1;
 
-            reversedStars[index].setAttribute("data-clicked", "true")
-        }
-    }
-}
+//             reversedStars[index].setAttribute("data-clicked", "true")
+//         }
+//     }
+// }
 
 function setRating(value){
     const ratingSelected = document.getElementById('ratingSelected');
