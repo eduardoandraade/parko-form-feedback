@@ -9,6 +9,6 @@ const inserirDados = require('./routes/inserirDados');
 const recuperarDados = require('./routes/recuperarDados');
 
 app.use('/inserir', inserirDados);
-app.use('/recuperar', recuperarDados);
+// app.use('/recuperar', recuperarDados);
 
 module.exports = app;

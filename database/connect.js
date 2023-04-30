@@ -1,8 +1,8 @@
 const mysql = require('mysql');
-const host = 'localhost';
-const user = 'root';
-const password = 711098;
-const database = 'parko_avaliacao';
+const host = ''; //informar host 
+const user = ''; //informar usuário
+const password = ''; //informar senha
+const database = ''; //informar nome do banco de dados
 
 const conn = mysql.createConnection({
     host: `${host}`,
