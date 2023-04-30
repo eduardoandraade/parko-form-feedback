@@ -1,3 +1,5 @@
+// Adicionando Estilo
+
 const inputs = document.querySelectorAll(".input");
 
 function focusFunc() {
@@ -27,9 +29,9 @@ inputs.forEach((input) => {
 //       localStorage.setItem(key, value);
 //     });
 //   });
+// Adicionando Avaliação usando estrelas 
 
 let stars = document.querySelectorAll(".ratings span");
-let products = document.querySelectorAll(".ratings");
 let ratings = [];
 
 for(let star of stars){
@@ -56,6 +58,20 @@ for(let star of stars){
         // ratings.push(data);
         // localStorage.setItem("rating", JSON.stringify(ratings))
     })
+
+// Recuperando value do span clicado
+
+    const ratingDiv = document.querySelector('.ratings');
+    const ratingInput = document.querySelector('#ratingSelected')
+
+    const ratingStars = ratingDiv.querySelectorAll('span')
+    ratingStars.forEach((star) => {
+    star.addEventListener('click', () => {
+        const ratingValue = star.getAttribute('data-rating')
+
+        ratingInput.value = ratingValue;
+    })
+})
 }
 
 // if(localStorage.getItem("rating")){
@@ -70,6 +86,35 @@ for(let star of stars){
 //         }
 //     }
 // }
+// Enviando dados do formulário
+
+const form = document.getElementById('feedback-form')
+const ratingSelected = document.getElementById('ratingSelected')
+
+form.addEventListener('submit', (ev) => {
+    ev.preventDefault();
+
+    const formData = new FormData(form);
+    const feedback = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        rating: formData.get('rating'),
+        message: formData.get('message')
+    };
+
+    fetch('http://localhost:3000/feedback', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(feedback)
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error))
+
+    form.reset()
+})
 
 function setRating(value){
     const ratingSelected = document.getElementById('ratingSelected');
