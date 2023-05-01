@@ -52,10 +52,10 @@ for(let star of stars){
 })
 }
 
-// Enviando dados do formulário
+// Enviando dados do formulário arquivo main.js pasta pai
 
 const form = document.getElementById('feedback-form')
-const ratingSelected = document.getElementById('ratingSelected')
+
 
 form.addEventListener('submit', (ev) => {
     ev.preventDefault();
@@ -68,7 +68,7 @@ form.addEventListener('submit', (ev) => {
         message: formData.get('message')
     };
 
-    fetch('http://localhost:3000/feedback', {
+    fetch('http://localhost:3000/app/feedbacks', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -76,9 +76,13 @@ form.addEventListener('submit', (ev) => {
         body: JSON.stringify(feedback)
     })
     .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error(error))
+    .then(data => {
+        console.log('Dados do feedback enviados com sucesso:', data);
+    })
+    .catch(error => {
+        console.error('Erro ao enviar dados do feedback:', error);
+    });
 
-    form.reset()
-})
+    form.reset();
+});
 
