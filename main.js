@@ -1,3 +1,4 @@
+
 // Adicionando Estilo
 
 const inputs = document.querySelectorAll(".input");
@@ -52,37 +53,32 @@ for(let star of stars){
 })
 }
 
-// Enviando dados do formulário arquivo main.js pasta pai
+// arquivo main.js pasta pai
 
-const form = document.getElementById('feedback-form')
-
+const form = document.getElementById('feedback-form');
 
 form.addEventListener('submit', (ev) => {
-    ev.preventDefault();
+  ev.preventDefault();
 
-    const formData = new FormData(form);
-    const feedback = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        rating: formData.get('rating'),
-        message: formData.get('message')
-    };
+  const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const rating = document.getElementById('ratingSelected').value;
+    const message = document.getElementById('message').value;
 
     fetch('http://localhost:3000/app/feedbacks', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(feedback)
+        body: JSON.stringify({
+            name,
+            email,
+            rating,
+            message
+        })
     })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Dados do feedback enviados com sucesso:', data);
-    })
-    .catch(error => {
-        console.error('Erro ao enviar dados do feedback:', error);
-    });
-
-    form.reset();
+    .then(res => res.text())
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
 });
 

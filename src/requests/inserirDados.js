@@ -1,4 +1,4 @@
-// carro controller
+// arquivo inserirDados.js pasta requests
 
 const App = require('../app');
 
@@ -28,7 +28,15 @@ module.exports = {
         let message = req.body.message;
 
 
-        if (name && email && rating && message){
+        if (!name) {
+            json.error = 'Nome não enviado';
+        } else if (!email) {
+            json.error = 'E-mail não enviado';
+        } else if (!rating) {
+            json.error = 'Avaliação não enviada';
+        } else if (!message) {
+            json.error = 'Mensagem não enviada';
+        } else {
             let feedbackCodigo = await App.inserirFeedback(name, email, rating, message);
             json.result = {
                 codigo: feedbackCodigo,
@@ -37,8 +45,6 @@ module.exports = {
                 rating,
                 message
             };
-        }else{
-            json.error = 'Campos não enviados';
         }
         res.json(json);
     }
