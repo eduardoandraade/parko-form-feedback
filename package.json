@@ -4,8 +4,7 @@
   "description": "Aplicação desenvolvida para avaliar atendimento dos clientes após sua compra.",
   "main": "main.js",
   "scripts": {
-    "start": "nodemon ./src/server.js",
-    "json-server": "json-server --watch db.json"
+    "start": "nodemon ./src/server.js"
   },
   "keywords": [],
   "author": "",

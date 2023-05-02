@@ -1,4 +1,4 @@
-// arquivo inserirDados.js pasta requests
+// arquivo inserirDados.js na pasta requests
 
 const App = require('../app');
 
@@ -6,17 +6,17 @@ module.exports = {
     buscarTodos: async (req, res) => {
         let json = {error:'', result:[]};
 
-        let feedbacks = await App.buscarTodos();
-
-        for(let i in feedbacks){
-            json.result.push({
-                name: feedbacks[i].name,
-                email: feedbacks[i].email,
-                rating: feedbacks[i].rating,
-                message: feedbacks[i].message
-            });
+        try {
+            const feedbacks = await App.buscarTodos();
+            json.result = feedbacks.map(feedback => ({
+                name: feedback.name,
+                email: feedback.email,
+                rating: feedback.rating,
+                message: feedback.message
+            }));
+        } catch (error) {
+            json.error = error.message;
         }
-
         res.json(json);
     },
     inserirFeedback: async(req, res) => {

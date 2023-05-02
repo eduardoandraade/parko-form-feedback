@@ -1,5 +1,3 @@
-// app.js na pasta filha src
-
 const db = require ('./db');
 
 module.exports = {
@@ -23,24 +21,6 @@ module.exports = {
                 return;
               }
               aceito(results.insertId);
-            }
-          );
-        });
-      }, buscarPorCodigo: (codigo) => {
-        return new Promise((aceito, rejeitado) => {
-          db.query(
-            'SELECT * FROM feedbacks WHERE codigo = ?',
-            [codigo],
-            (error, results) => {
-              if (error) {
-                rejeitado(error);
-                return;
-              }
-              if (results.length === 0) {
-                rejeitado(new Error('Feedback não encontrado'));
-                return;
-              }
-              aceito(results[0]);
             }
           );
         });

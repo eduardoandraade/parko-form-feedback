@@ -17,9 +17,10 @@
         <div class="form">
             <div class="feedback-form">
 
-                <form class="teste" id="feedback-form">
+                <form class="teste" id="feedback-form" method="post" action="http://localhost:3000/app/feedbacks">
                     <h3 class="title">Avalie nosso atendimento</h3>
                     <div class="input-container">
+                        <input type="hidden" id="id" name="id">
                         <input type="text" id="name" name="name" class="input">
                         <label for="name">Nome</label>
                         <span>Nome</span>
@@ -98,6 +99,6 @@
     </div>
 
     
-    <script src="./main.js" type="module"></script>
+    <script src="./main.js"></script>
 </body>
 </html>

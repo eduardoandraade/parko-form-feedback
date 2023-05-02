@@ -1,3 +1,4 @@
+let feedbacks = []
 
 // Adicionando Estilo
 
@@ -53,32 +54,41 @@ for(let star of stars){
 })
 }
 
-// arquivo main.js pasta pai
+// form 
 
 const form = document.getElementById('feedback-form');
 
-form.addEventListener('submit', (ev) => {
-  ev.preventDefault();
-
-  const name = document.getElementById('name').value;
+form.addEventListener('submit', async (ev) => {
+    ev.preventDefault();
+  
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData.entries());
+    console.log(data);
+  
+    const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const rating = document.getElementById('ratingSelected').value;
     const message = document.getElementById('message').value;
-
-    fetch('http://localhost:3000/app/feedbacks', {
+  
+    try {
+      const response = await fetch('http://localhost:3000/app/feedbacks', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            name,
-            email,
-            rating,
-            message
+          name,
+          email,
+          rating,
+          message
         })
-    })
-    .then(res => res.text())
-    .then(data => console.log(data))
-    .catch(err => console.log(err));
-});
+      });
+  
+      const responseData = await response.json();
+      console.log(responseData);
+    } catch (error) {
+        console.log(error);
+    }
 
+    ev.target.reset()
+  });
