@@ -71,7 +71,7 @@ form.addEventListener('submit', async (ev) => {
     const message = document.getElementById('message').value;
   
     try {
-      const response = await fetch('http://localhost:3000/app/feedbacks', {
+      const response = await fetch('http://54.207.49.58:3000/app/feedbacks', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
