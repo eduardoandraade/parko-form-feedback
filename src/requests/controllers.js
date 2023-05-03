@@ -47,5 +47,11 @@ module.exports = {
             };
         }
         res.json(json);
+    },
+    excluir: async (req, res) => {
+        let json = {error:'', result:{}};
+
+        await App.excluir(req.params.id);
+        res.json(json);
     }
 }
