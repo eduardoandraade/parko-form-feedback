@@ -71,7 +71,7 @@ form.addEventListener('submit', async (ev) => {
     const message = document.getElementById('message').value;
   
     try {
-      const response = await fetch('https://parkofeedback.info/app/feedbacks', {
+      const response = await fetch('https://177.71.170.79:3000/app/feedbacks', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
