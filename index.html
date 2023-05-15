@@ -16,17 +16,16 @@
     <div class="container">
         <div class="form">
             <div class="feedback-form">
-
                 <form class="teste" id="feedback-form" method="post" action="https://parkofeedback.info/app/feedbacks">
-                    <h3 class="title">Avalie nosso atendimento</h3>
+                    <img src="./assets/logo-designed-inspire.svg" alt="" class="logo">
                     <div class="input-container">
                         <input type="hidden" id="id" name="id">
-                        <input type="text" id="name" name="name" class="input">
+                        <input type="text" id="name" name="name" class="input" required>
                         <label for="name">Nome</label>
                         <span>Nome</span>
                     </div>
                     <div class="input-container">
-                        <input type="email" name="email" id="email" class="input">
+                        <input type="email" name="email" id="email" class="input" required>
                         <label for="email">Email</label>
                         <span>Email</span>
                     </div>
@@ -36,7 +35,7 @@
                             <h3 class="title">Curtiu nosso atendimento?</h3>
                             <div class="ratings-wrapper">
                                 <div data-productid="39" class="ratings">
-                                    <input type="hidden" name="rating" id="ratingSelected">
+                                    <input type="hidden" name="rating" id="ratingSelected" required>
                                     <span data-rating="5">&#9733</span>
                                     <span data-rating="4">&#9733</span>
                                     <span data-rating="3">&#9733</span>
@@ -49,7 +48,7 @@
 
 
                     <div class="input-container textarea">
-                        <textarea id="message" name="message" class="input"></textarea>
+                        <textarea id="message" name="message" class="input" required></textarea>
                         <label for="message">Deixe o seu feedback pra gente</label>
                         <span>Deixe o seu feedback pra gente</span>
                     </div>

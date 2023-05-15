@@ -54,6 +54,14 @@ form {
    position: relative;
 }
 
+.logo {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 10rem;
+   height: auto;
+}
+
 .title{
    font-weight: 500;
    font-size: 1rem;
@@ -79,6 +87,7 @@ form {
    font-weight: 500;
 }
 
+/* styling start rating */
 .rating-wrap {
    max-width: 480px;
    margin: auto;
@@ -86,11 +95,6 @@ form {
    text-align: center;
 }
 
-.center {
-   margin: auto;
-}
-
-/* styling start rating */
 
 .ratings{
    display: flex;
@@ -106,20 +110,20 @@ form {
 }
 
 .ratings span:hover{
-   color: #ffd700;
+   color: #FFB516;
    transform: scale(1.3);
 }
 
 .ratings span:hover ~ span {
-   color: #ffd700;
+   color: #FFB516;
 }
 
 .ratings span[data-clicked]{
-   color: #ffd700;
+   color: #FFB516;
 }
 
 .ratings span[data-clicked] ~ span {
-   color: #ffd700;
+   color: #FFB516;
 }
 
 
@@ -311,12 +315,21 @@ textarea.input{
    }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 480px) {
+   .container {
+      padding: 0.5rem;
+   }
+}
+
+@media (max-width: 350px) {
    form {
       left: -15px;
    }
    .contact-info {
       left: -15px;
+   }
+   .container {
+      padding: 0.5rem;
    }
 }
 
