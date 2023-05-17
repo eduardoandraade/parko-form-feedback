@@ -13,8 +13,30 @@
     font-family: "Poppins", sans-serif;
  }
 
+ .modal {
+   display: none; /* Oculta o modal por padrão */
+   position: fixed; /* Posiciona o modal fixo na tela */
+   z-index: 20; /* Define a ordem de empilhamento */
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto; /* Adiciona rolagem quando necessário */
+   background-color: rgba(0, 0, 0, 0.767); /* Fundo escuro semi-transparente */
+ }
+ 
+ .modal-content {
+   background-color: #fefefe;
+   margin: 20% auto;
+   padding: 20px;
+   border: 1px solid #555;
+   width: 80%;
+   max-width: 600px;
+ }
+ 
  .container {
     position: relative;
+    z-index: 10;
     width: 100%;
     min-height: 100vh;
     padding: 2rem;
@@ -332,4 +354,3 @@ textarea.input{
       padding: 0.5rem;
    }
 }
-

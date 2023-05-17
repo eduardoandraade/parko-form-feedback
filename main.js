@@ -39,6 +39,15 @@ for(let star of stars){
         }
     })
 
+    // Função para exibir o modal
+function exibirModal() {
+    var modal = document.getElementById("modal");
+    var container = document.querySelector(".container");
+    modal.style.display = "block";
+    container.style.zIndex= "0";
+  }
+
+
 // Recuperando value do span clicado
 
     const ratingDiv = document.querySelector('.ratings');
@@ -91,4 +100,5 @@ form.addEventListener('submit', async (ev) => {
     }
 
     ev.target.reset()
+    exibirModal();
   });
