@@ -17,5 +17,7 @@ A API de feedbacks da Parko está disponível no seguinte endereço: https://par
 
 ## Segurança
 Para garantir a segurança da API de feedbacks da Parko, foram implementadas as seguintes medidas:
+
 Autenticação: A API requer autenticação para acessar os recursos. Os usuários devem fornecer um token de autenticação válido no cabeçalho das solicitações para autenticar-se e acessar os recursos protegidos.
+
 HTTPS: A API é acessada por meio de uma conexão segura usando HTTPS. Isso garante que todos os dados enviados e recebidos sejam criptografados, protegendo contra interceptação e espionagem
