@@ -12,7 +12,7 @@ Validação dos campos do formulário para garantir que sejam preenchidos corret
 Armazenamento dos feedbacks enviados no banco de dados MySQL para posterior análise.
 
 ## Deploy
-A aplicação também está disponível no GitHub Pages, no seguinte endereço: Form Feedback - Loja Parko. Você pode acessar e utilizar a aplicação diretamente por lá.
+A aplicação também está disponível no GitHub Pages, no seguinte endereço: https://eduardoandraade.github.io/sistema-avaliacao-atendimento/. Você pode acessar e utilizar a aplicação diretamente por lá.
 A API de feedbacks da Parko está disponível no seguinte endereço: https://parkofeedback.info/app/feedbacks
 
 ## Segurança
